@@ -1,5 +1,4 @@
 const { merge } = require("webpack-merge"); // merge helps to merge all code in "webapack.common.js" file code into 'webpack-dev' or 'webpack-pord' files
-const HtmlWebpackPlugin = require("html-webpack-plugin"); // take html files and inject inside of it
 const { ModuleFederationPlugin } = require("webpack").container;
 const commonConfig = require("./webpack.common");
 const packageJson = require('../package.json');
@@ -24,9 +23,6 @@ const devConfig = {
       // shared:['react','react-dom']
       shared:packageJson.dependencies
 
-    }),
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
     }),
   ],
 };

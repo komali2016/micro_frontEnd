@@ -2,8 +2,9 @@ const { merge } = require("webpack-merge"); // merge helps to merge all code in 
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // take html files and inject inside of it
 // const moduleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 const { ModuleFederationPlugin } = require("webpack").container;
-
 const commonConfig = require("./webpack.common");
+
+
 const devConfig = {
   mode: "development",
   devServer: {
@@ -23,9 +24,6 @@ const devConfig = {
       shared : packageJson.dependencies // shared: ["react", "react-dom"], // to share or load only copy of each 
 
 
-    }),
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
     }),
   ],
 };
