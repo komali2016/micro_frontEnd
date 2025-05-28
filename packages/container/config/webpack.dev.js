@@ -12,6 +12,7 @@ const devConfig = {
       index: "index.html",
     },
   },
+  
   plugins: [
     new ModuleFederationPlugin({
       // HOST --> it's working as host --> get info from marking app bcz we have set it up below in remote Object
